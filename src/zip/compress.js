@@ -1,4 +1,4 @@
-import { createReadStream, createWriteStream, access } from "fs";
+import { createReadStream, createWriteStream } from "fs";
 import { fileURLToPath } from "url";
 import path, { dirname } from "node:path";
 import { createGzip } from "node:zlib";

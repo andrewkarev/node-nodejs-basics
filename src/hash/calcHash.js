@@ -14,6 +14,7 @@ const fileToHashPath = path.join(
 const calculateHash = async () => {
   const content = await fs.readFile(fileToHashPath, "utf-8");
   const hash = createHash("sha256").update(content).digest("hex");
+
   console.log(hash);
 };
 

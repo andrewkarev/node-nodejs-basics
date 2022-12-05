@@ -9,6 +9,7 @@ const fileToReadPath = path.join(_dirname, "files", "fileToRead.txt");
 const read = async () => {
   try {
     const content = await fs.readFile(fileToReadPath, "utf-8");
+
     console.log(content);
   } catch (error) {
     throw new Error("FS operation failed");

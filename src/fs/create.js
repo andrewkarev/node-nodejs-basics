@@ -8,9 +8,7 @@ const destination = path.join(_dirname, "files", "fresh.txt");
 
 const create = async () => {
   try {
-    await fs.appendFile(destination, "I am fresh and young", {
-      flag: "ax",
-    });
+    await fs.appendFile(destination, "I am fresh and young", { flag: "ax" });
   } catch (error) {
     throw new Error("FS operation failed");
   }
