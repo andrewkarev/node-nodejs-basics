@@ -9,7 +9,7 @@ const fileToReadPath = path.join(_dirname, "files", "fileToRead.txt");
 
 const read = async () => {
   const stream = createReadStream(fileToReadPath, "utf-8");
-  let streamContent;
+  let streamContent = "";
 
   stream.on("data", (chunk) => (streamContent += chunk));
   stream.on("end", () => stdout._write(streamContent));
